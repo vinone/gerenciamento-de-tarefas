@@ -1,17 +1,44 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Content/bootstrap/css/bootstrap.min.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Scripts/index.js">
     <Files>
-      <File FileName="Views/Home/Index.aspx" Line="7" Column="59" />
-      <File FileName="Controllers/HomeController.cs" Line="16" Column="4" />
-      <File FileName="Scripts/index.js" Line="6" Column="47" />
-      <File FileName="Content/bootstrap/css/bootstrap.min.css" Line="1" Column="1" />
+      <File FileName="Scripts/index.js" Line="7" Column="11" />
+      <File FileName="Controllers/TarefaController.cs" Line="19" Column="4" />
+      <File FileName="Views/Tarefa/Index.aspx" Line="22" Column="60" />
+      <File FileName="Models/TarefaModel.cs" Line="27" Column="7" />
+      <File FileName="WebTasks.Data/Tarefas.cs" Line="11" Column="4" />
+      <File FileName="Models/ParticipanteModel.cs" Line="8" Column="34" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="gerenciamento-de-tarefas" expanded="True">
+            <Node name="Content" expanded="True">
+              <Node name="bootstrap" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Controllers" expanded="True" />
+            <Node name="Models" expanded="True" />
+            <Node name="Scripts" expanded="True">
+              <Node name="index.js" selected="True" />
+            </Node>
+            <Node name="Views" expanded="True">
+              <Node name="Tarefa" expanded="True" />
+            </Node>
+            <Node name="Global.asax" expanded="True" />
+          </Node>
+          <Node name="WebTasks.Core" expanded="True" />
+          <Node name="WebTasks.Data" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/home/vinone/projects/gerenciamento-de-tarefas/gerenciamento-de-tarefas/Scripts/index.js" line="6" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
