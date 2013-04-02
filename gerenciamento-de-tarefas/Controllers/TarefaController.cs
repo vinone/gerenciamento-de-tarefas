@@ -15,9 +15,14 @@ namespace gerenciamentodetarefas
 		}
 
 		[HttpPost]
-		public JsonResult Listar()
+		public JsonResult Listar(string data)
 		{
-			return Json(new TarefaModelSearch().ConsultarTodos(), 
+			var model = new TarefaModelSearch
+			{
+				Data = Convert.ToDateTime(data)
+			};
+
+			return Json(model.ConsultarPeloFiltro(), 
 			            JsonRequestBehavior.AllowGet);
 		}
 	}

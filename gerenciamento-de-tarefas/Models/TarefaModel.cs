@@ -16,7 +16,7 @@ namespace gerenciamentodetarefas
 	{
 		public DateTime Data {get; set;}
 
-		public IEnumerable<TarefaModel> ConsultarTodos()
+		public IEnumerable<TarefaModel> ConsultarPeloFiltro()
 		{
 			return new List<TarefaModel>{
 				new TarefaModel{ 
@@ -53,12 +53,6 @@ namespace gerenciamentodetarefas
 					Concluida = false
 				}
 			};
-//			throw new System.NotImplementedException ();
-		}
-
-		public IEnumerable<TarefaModel> ConsultarPeloFiltro()
-		{
-			throw new System.NotImplementedException ();
 		}
 	}
 }
