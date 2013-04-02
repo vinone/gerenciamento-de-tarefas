@@ -14,6 +14,12 @@ namespace Controllers
 			ViewData ["Message"] = "Welcome to ASP.NET MVC on Mono!";
 			return View ();
 		}
+
+//		[HttpPost]
+//		public JsonResult Show(string id, string age)
+//		{
+//			return Json(new { Id = id, Age = age},JsonRequestBehavior.AllowGet);
+//		}
 	}
 }
 

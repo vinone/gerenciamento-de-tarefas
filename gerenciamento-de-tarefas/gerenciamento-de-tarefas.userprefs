@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Content/bootstrap/css/bootstrap.min.css">
+    <Files>
+      <File FileName="Views/Home/Index.aspx" Line="7" Column="59" />
+      <File FileName="Controllers/HomeController.cs" Line="16" Column="4" />
+      <File FileName="Scripts/index.js" Line="6" Column="47" />
+      <File FileName="Content/bootstrap/css/bootstrap.min.css" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/vinone/projects/gerenciamento-de-tarefas/gerenciamento-de-tarefas/Scripts/index.js" line="6" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
