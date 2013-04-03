@@ -12,6 +12,7 @@ namespace WebTasks.Core
 			Conclusao = conclusao;
 		}
 
+		protected int Id {get; set;}
 		public string Observacao {get; protected set;}
 		public DateTime Conclusao {get; protected set;}
 	}

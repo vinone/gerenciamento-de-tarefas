@@ -1,44 +1,40 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
+using NHibernate;
 using WebTasks.Core;
 
 namespace WebTasks.Data
 {
 	public class Tarefas : ITarefas
 	{
-		public IEnumerable<Tarefa> ConsultarDeHoje ()
+		private readonly ISession _session;
+		public Tarefas(ISession session)
 		{
-			throw new System.NotImplementedException ();
+			_session = session;
 		}
 
-		public IEnumerable<Tarefa> ConsultarDeAmanha ()
+		public IEnumerable<Tarefa> ConsultarPelaData (DateTime data)
 		{
-			throw new System.NotImplementedException ();
-		}
-
-		public IEnumerable<Tarefa> ConsultarDosProximos7Dias ()
-		{
-			throw new System.NotImplementedException ();
-		}
-
-		public IEnumerable<Tarefa> ConsultarPorData (DateTime data)
-		{
-			throw new System.NotImplementedException ();
+			return _session.QueryOver<Tarefa>()
+				.Where(x => x.Quando == data)
+					.List()
+					.AsEnumerable();
 		}
 
 		public Tarefa Obter (int id)
 		{
-			throw new System.NotImplementedException ();
+			return _session.Get<Tarefa>(id);
 		}
 
 		public void Salvar (Tarefa tarefa)
 		{
-			throw new System.NotImplementedException ();
+			_session.SaveOrUpdate(tarefa);
 		}
 
 		public void Cancelar (Tarefa tarefa)
 		{
-			throw new System.NotImplementedException ();
+			_session.Delete(tarefa);
 		}
 	}
 }

@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 	<link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap.min.css" media="screen"></link>
+	<link rel="stylesheet" href="~/Content/main.css"></link>
 	<title>webTasks - Gerenciamento de tarefas online</title>
 </head>
 <body>
@@ -24,7 +25,6 @@
 					<tr>
 						<td>O que?</td>
 						<td>Quando?</td>
-						<td>Com quem?</td>
 						<td>Pronto?</td>
 					</tr>
 				</thead>
@@ -33,11 +33,17 @@
 		
 		<div class="row-fluid">
 			<form id="create-form" action="Tarefa/New" method="post" class="form-inline">
-				<input class="input-small" type="text" placeholder="O que?" name="oque"></input>
-				<input class="input-small" type="text" placeholder="Quando?" name="quando"></input>
-				<input class="input-small" type="text" placeholder="Com quem?" name="comquem"></input>
+				<input class="input-small" type="text" placeholder="O que?" id="oque"></input>
+				<input class="input-small" type="text" placeholder="Quando?" id="quando"></input>
 				<button class="btn btn-primary" type="button">Criar</button>
 			</form>
+		</div>
+		
+		<div class="rowf-fluid">
+		    <div class="alert invisible">
+			    <button type="button" class="close" data-dismiss="alert">&times;</button>
+			    <label class="message"></label>
+		    </div>
 		</div>
 	</div>
     
@@ -45,4 +51,5 @@
 	<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 	<script src="https://raw.github.com/timrwood/moment/2.0.0/min/moment.min.js"></script>
 	<script src="~/Scripts/index.js"></script>
+	<script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
 </body>

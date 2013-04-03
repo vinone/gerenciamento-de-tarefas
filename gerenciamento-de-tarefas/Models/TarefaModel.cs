@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using WebTasks.Core;
 
 namespace gerenciamentodetarefas
 {
@@ -8,51 +9,49 @@ namespace gerenciamentodetarefas
 		public int Id {get;set;}
 		public string Descricao {get; set;}
 		public string Quando {get;set;}
-		public List<ParticipanteModel> Participantes {get; set;}
 		public bool Concluida {get; set;}
 	}
 
 	public class TarefaModelSearch : TarefaModel
 	{
+		private ITarefas _tarefas;
+		public TarefaModelSearch(ITarefas tarefas)
+		{
+			_tarefas = tarefas;
+		}
+
 		public DateTime Data {get; set;}
 
 		public IEnumerable<TarefaModel> ConsultarPeloFiltro()
 		{
-			return new List<TarefaModel>{
-				new TarefaModel{ 
-					Id = 1,
-					Descricao = "Estudar Ruby",
-					Quando = "02/04/2013",
-					Participantes = new List<ParticipanteModel>
-					{
-						new ParticipanteModel{ 
-							Nome = "João José", 
-							Email = "joao.jose@gmail.com"},
-						new ParticipanteModel{ 
-							Nome = "Maria Joao", 
-							Email = "maria.joao@gmail.com"},
-					},
-					Concluida = false
-				},
-				new TarefaModel{ 
-					Id = 2,
-					Descricao = "Terminar freela",
-					Quando = "02/04/2013",
-					Participantes = new List<ParticipanteModel>{
-							new ParticipanteModel{ 
-							Nome = "Paulo Antonio", 
-							Email = "paulo.antonio@gmail.com"},
-					},
-					Concluida = false
-				},
-				new TarefaModel{ 
-					Id = 3,
-					Descricao = "Pagar mensalidade",
-					Quando = "02/04/2013",
-					Participantes = new List<ParticipanteModel>(),
-					Concluida = false
-				}
-			};
+			var tarefas = new List<TarefaModel>();
+
+			foreach (var tarefa in _tarefas.ConsultarPelaData(Data)) {
+				tarefas.Add(new TarefaModel
+	            {
+					Id = tarefa.Id,
+					Descricao = tarefa.Descricao,
+					Concluida = tarefa.EstaConcluida,
+					Quando = tarefa.Quando.ToShortDateString()
+				});
+			}
+
+			return tarefas;
+		}
+	}
+
+	public class TarefaModelCreate : TarefaModel
+	{
+		public DateTime PrevisaoConclusao {get;set;}
+		private ITarefas _tarefas;
+		public TarefaModelCreate(ITarefas tarefas)
+		{
+			_tarefas = tarefas;
+		}
+
+		public void Criar()
+		{
+			_tarefas.Salvar(new Tarefa(Descricao,PrevisaoConclusao));
 		}
 	}
 }

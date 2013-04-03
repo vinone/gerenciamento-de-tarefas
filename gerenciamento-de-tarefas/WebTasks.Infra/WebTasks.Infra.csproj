@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{859350E1-80EB-44C1-BC66-09498BBD1EBA}</ProjectGuid>
+    <ProjectGuid>{646CD9D0-CA3D-4E91-A8E9-716EEEBDF89E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WebTasks.Core</RootNamespace>
-    <AssemblyName>WebTasks.Core</AssemblyName>
+    <RootNamespace>WebTasks.Infra</RootNamespace>
+    <AssemblyName>WebTasks.Infra</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,9 +33,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Tarefa.cs" />
-    <Compile Include="Resultado.cs" />
-    <Compile Include="ITarefas.cs" />
+    <Compile Include="NHibernateHelper.cs" />
+    <Compile Include="Repository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
