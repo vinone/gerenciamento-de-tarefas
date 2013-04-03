@@ -1,13 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Scripts/index.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebTasks.Data/DataAccessProvider.cs">
     <Files>
       <File FileName="Controllers/TarefaController.cs" Line="10" Column="24" />
       <File FileName="Scripts/index.js" Line="26" Column="38" />
       <File FileName="Views/Tarefa/Index.aspx" Line="24" Column="12" />
       <File FileName="Models/TarefaModel.cs" Line="45" Column="36" />
       <File FileName="Fakes/TarefasMock.cs" Line="19" Column="6" />
-      <File FileName="WebTasks.Data/DataAccessProvider.cs" Line="40" Column="16" />
+      <File FileName="WebTasks.Data/DataAccessProvider.cs" Line="25" Column="49" />
       <File FileName="WebTasks.Data/ResultadoMap.cs" Line="1" Column="1" />
       <File FileName="WebTasks.Data/TarefaMap.cs" Line="17" Column="12" />
       <File FileName="WebTasks.Data/Tarefas.cs" Line="14" Column="23" />
@@ -20,15 +20,15 @@
             <Node name="Controllers" expanded="True" />
             <Node name="Fakes" expanded="True" />
             <Node name="Models" expanded="True" />
-            <Node name="Scripts" expanded="True">
-              <Node name="index.js" selected="True" />
-            </Node>
+            <Node name="Scripts" expanded="True" />
             <Node name="Views" expanded="True">
               <Node name="Tarefa" expanded="True" />
             </Node>
           </Node>
           <Node name="WebTasks.Core" expanded="True" />
-          <Node name="WebTasks.Data" expanded="True" />
+          <Node name="WebTasks.Data" expanded="True">
+            <Node name="DataAccessProvider.cs" selected="True" />
+          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

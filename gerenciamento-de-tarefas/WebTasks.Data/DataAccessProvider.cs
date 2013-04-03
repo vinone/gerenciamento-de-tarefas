@@ -30,6 +30,7 @@ namespace WebTasks.Data
 					          	.ConnectionString(_connectionString))
 							.Mappings(m => m.FluentMappings
 					          .AddFromAssembly(Assembly.GetExecutingAssembly()))
+								.ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(false, true))
 									.BuildSessionFactory();
 		}
 
